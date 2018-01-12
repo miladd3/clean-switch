@@ -10,7 +10,7 @@ First copy `clean-switch.css` in your project. then link it to your project HTML
 
     <link rel="stylesheet" href="clean-switch.css">
 
-You can also use SCSS file clean-switch.scss
+You can also use SCSS file `clean-switch.scss`
 
 Make HTML switch structure like this. and put it inside forms or anywhere you like and it will behave like checkboxes.
 
