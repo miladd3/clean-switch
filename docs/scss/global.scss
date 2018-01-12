@@ -1,0 +1,513 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+
+small {
+  font-size: 70%;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*======== Variables ========*/
+
+$base-color: #3f51b5;
+$main-color: desaturate(shade($base-color,40),50);
+$second-color: #f6c37a;
+$third-color: #ff6868;
+$fourth-color: #29cc97;
+$bg-color: #ebeef5; // Main Background color
+$btn-main-color: $base-color; // Primary Button color
+
+
+$error-color : #f2682e;
+$success-color : #2db04c;
+
+$font: 'IRANSans', sans-serif;
+$titles-font: 'Lobster', sans-serif;
+
+/*======== Animations ========*/
+
+@-webkit-keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+/*======== Mixings ========*/
+
+@import "mixins";
+
+/*======== Default Codes ========*/
+
+body {
+  font-family: $font;
+  font-size: 14px;
+  background: #fff;
+  color: $main-color;
+}
+
+hr {
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,button,textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: $titles-font;
+}
+
+h1 {
+  font-size:36px;
+}
+
+h2 {
+  font-size:24px;
+}
+
+h3 {
+  font-size:18px;
+}
+
+h4 {
+  font-size:16px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+strong,b {
+  font-weight: bold;
+}
+
+img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
+
+i {
+  //vertical-align: middle;
+}
+
+.list {
+  li {
+  padding-right: 20px;
+  position: relative;
+  box-sizing: padding-box;
+  line-height: 40px;
+  font-weight: 300;
+  
+    &:before {
+      content: "\f00c";
+      display: block;
+      position: absolute;
+      font-family: milad;
+      right: 0;
+      top: -2px;
+    }
+  }
+}
+
+.lighten {
+  font-weight: 300;
+}
+
+.mf-pull-left {
+  float: left;
+}
+
+.mf-pull-right {
+  float: right;
+}
+/*------------------------------------------------*/
+/*-----------------[inputs]-----------------*/
+/*------------------------------------------------*/
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+select,
+textarea {
+  font-family: $font;
+  border: 1px solid lighten($main-color, 50%);
+  margin: 5px 0 7px 0;
+  padding: 9px 12px;
+  @include border-radius();
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include transition();
+  
+  &:focus {
+    border: 1px solid lighten($base-color, 10%);
+    display: inline-block;
+    margin: 5px 0 7px 0;
+    box-shadow: 0 0 0 2px rgba($btn-main-color,0.3);
+  }
+
+
+  &:disabled {
+    opacity: 0.8;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background: url(../img/arrowdown.svg) left center no-repeat;
+
+  &:disabled {
+    background-color: #f2f2f2;
+  }
+}
+
+#wrap {
+  padding-top: 70px;
+}
+
+/*------------------------------------------------*/
+/*-----------------[TYPOGRAPHY]-----------------*/
+/*------------------------------------------------*/
+.mf-text-success {
+  color: $success-color;
+}
+
+.mf-text-info {
+  color: $base-color;
+}
+
+.mf-text-warning {
+  color: #FFC501;
+}
+.mf-text-alert,.mf-text-error {
+  color: $error-color;
+}
+/*------------------------------------------------*/
+/*-----------------[BTNs]-----------------*/
+/*------------------------------------------------*/
+
+.mf-btn {
+  background-color: $btn-main-color;
+  @include border-radius(100px);
+  display: inline-block;
+  color: #ffffff;
+  padding: 12px 22px;
+  margin: 10px 0;
+  @include transition(all,0.1s);
+  border: 0;
+  cursor: pointer;
+  font-family: $font;
+
+  &:hover {
+    background-color: darken($btn-main-color,5);
+    color: #ffffff;
+  }
+
+
+/*  &:active {
+    @include transformY(2px);
+  }*/
+
+  /*---------- btn gray ------------*/
+
+  &.mf-btn-gray {
+    background-color: #f2f2f2;
+    color: #999999;
+    &:hover {
+      background-color: darken(#f2f2f2,5);
+      color: #444444;
+    }
+  }
+
+
+  /*---------- btn Second ------------*/
+
+  &.mf-btn-second {
+    background-color: $second-color;
+    color: darken($second-color,40);
+
+    &:hover {
+      background-color: darken($second-color,5);
+    }
+  }
+  /*---------- btn light ------------*/
+
+  &.mf-btn-light {
+    background-color: lighten($btn-main-color,30);
+    color: darken($btn-main-color,10);
+
+
+    &:hover {
+      background-color: darken(lighten($btn-main-color,30),5);
+    }
+  }
+
+  /*---------- btn Delete ------------*/
+
+  &.mf-btn-delete {
+    background-color: lighten(#FF003C,45);
+    color: #FF003C;
+
+
+    &:hover {
+      background-color: darken(lighten(#FF003C,45),5);
+    }
+  }
+
+  /*---------- btn options ------------*/
+
+  &.mf-btn-block {
+    display: block;
+  }
+
+  &.mf-btn-raised {
+    box-shadow: 0 3px 10px 0 rgba($btn-main-color, 0.5);
+  }
+
+  &.mf-btn-shadow {
+    box-shadow: 0 3px 10px 0 rgba(#000, 0.2);
+  }
+
+
+  &.mf-btn-icon-left {
+    padding-left: 50px;
+    position: relative;
+
+    i {
+      position: absolute;
+      padding: 10px;
+      left: 5px;
+      top: 5px;
+      @include border-radius(100px);
+      bottom: 5px;
+      line-height: 1;
+      background-color: rgba(#000, 0.15);
+    }
+  }
+
+
+
+  &.mf-btn-small {
+    font-size: 12px;
+    padding: 8px 20px;
+    font-weight: 300;
+
+    &.mf-btn-icon-left {
+      padding-left: 50px;
+
+      i {
+        position: absolute;
+        padding: 7px;
+        left: 5px;
+        top: 5px;
+        @include border-radius(100px);
+        bottom: 5px;
+        line-height: 1;
+        font-size: 10px;
+        background-color: rgba(#000, 0.15);
+      }
+    }
+  }
+
+  &.mf-btn-large {
+    font-size: 18px;
+    padding: 8px 20px;
+    font-weight: 300;
+
+    &.mf-btn-icon-left {
+      padding-left: 50px;
+
+      i {
+        position: absolute;
+        padding: 7px;
+        left: 5px;
+        top: 5px;
+        @include border-radius(100px);
+        bottom: 5px;
+        line-height: 1;
+        font-size: 18px;
+        background-color: rgba(#000, 0.15);
+      }
+    }
+  }
+}
+
+.iziModal-rtl .iziModal-header-subtitle, .iziModal-rtl .iziModal-header-title {
+  font-family: $font;
+}
+
+
+
+
+
+/*------------------------------------------------*/
+/*-----------------[Input Group]-----------------*/
+/*------------------------------------------------*/
+
+
+/*----------- Input group ---------------*/
+
+.mf-input-group {
+  padding: 10px 0 10px 10px;
+  clear: both;
+
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 3px;
+
+    .req {
+      color: #FF003C;
+      font-size: 7px;
+    }
+  }
+
+  select {
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+  input {
+    &.parsley-error {
+      box-shadow: 0 0 0 2px rgba($error-color,0.3);
+      border: 1px solid $error-color;
+    }
+
+    &.parsley-success {
+      box-shadow: 0 0 0 2px rgba($success-color,0.3);
+      border: 1px solid $success-color;
+    }
+
+    &::-webkit-input-placeholder {
+      text-align: right;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      text-align: right;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      text-align: right;
+    }
+
+    &:-ms-input-placeholder {
+      text-align: right;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    margin: 0;
+  }
+
+  .select2-selection {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+.parsley-errors-list {
+  font-size: 12px;
+  font-weight: 300;
+  color: darken($error-color,10);
+}
+
+.msection {
+  padding: 90px 0;
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'milad';
+  src:  url('fonts/milad.eot?c6otl3');
+  src:  url('fonts/milad.eot?c6otl3#iefix') format('embedded-opentype'),
+    url('fonts/milad.ttf?c6otl3') format('truetype'),
+    url('fonts/milad.woff?c6otl3') format('woff'),
+    url('fonts/milad.svg?c6otl3#milad') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'milad' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-brand:before {
+  content: "\e901";
+  color: #f7931a;
+}
+.icon-github-big-logo:before {
+  content: "\e900";
+}
+.icon-brand2:before {
+  content: "\e902";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-download:before {
+  content: "\e960";
+}

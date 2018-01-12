@@ -1,0 +1,210 @@
+$btn-main-color: #3f51b5;
+$black-color: #343434;
+$red-color: #ff6868;
+$green-color: #29cc97;
+$orange-color: #ff9800;
+
+.cl-switch {
+  input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+  }
+
+  /*
+  Switcher Style
+   */
+  .switcher {
+    display: inline-block;
+    border-radius: 100px;
+    width: 35px;
+    height: 15px;
+    background-color: #ccc;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+
+
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      margin-top: -2.5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 0;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    &:active:before {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 0 10px rgba($btn-main-color, 0.3);
+      transition: all, 0.1s;
+    }
+  }
+
+  .label {
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+
+  /*
+  When Checked
+   */
+  input[type="checkbox"]:checked + .switcher {
+    background-color: lighten($btn-main-color, 20);
+
+    &:before {
+      right: 100%;
+      margin-right: -20px;
+      background-color: $btn-main-color;
+    }
+  }
+
+
+
+  /*
+  Switch large style
+   */
+  &.cl-switch-large {
+    .switcher {
+      width: 52px;
+      height: 22px;
+
+      &:before {
+        width:30px;
+        height:30px;
+        margin-top:-4px;
+      }
+    }
+
+    .label {
+      font-size: 18px;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      &:before {
+        margin-right: -30px;
+      }
+    }
+  }
+
+
+  /*
+  Switch xlarge style
+   */
+  &.cl-switch-xlarge {
+    .switcher {
+      width: 87px;
+      height: 37px;
+
+      &:before {
+        width:50px;
+        height:50px;
+        margin-top:-6px;
+      }
+    }
+
+    .label {
+      font-size: 24px;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      &:before {
+        margin-right: -50px;
+      }
+    }
+  }
+
+
+  /*
+  Switch Black color style
+   */
+
+  &.cl-switch-black {
+    input[type="checkbox"]:checked + .switcher {
+      background-color: lighten($black-color, 20);
+
+      &:before {
+        background-color: $black-color;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 0 10px rgba($black-color, 0.3);
+    }
+  }
+  /*
+  Switch Red color style
+   */
+
+  &.cl-switch-red {
+    input[type="checkbox"]:checked + .switcher {
+      background-color: lighten($red-color, 20);
+
+      &:before {
+        background-color: $red-color;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 0 10px rgba($red-color, 0.3);
+    }
+  }
+
+  /*
+  Switch green color style
+   */
+
+  &.cl-switch-green {
+    input[type="checkbox"]:checked + .switcher {
+      background-color: lighten($green-color, 20);
+
+      &:before {
+        background-color: $green-color;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 0 10px rgba($green-color, 0.3);
+    }
+  }
+
+  /*
+  Switch green color style
+   */
+
+  &.cl-switch-orange {
+    input[type="checkbox"]:checked + .switcher {
+      background-color: lighten($orange-color, 20);
+
+      &:before {
+        background-color: $orange-color;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 0 10px rgba($orange-color, 0.3);
+    }
+  }
+}

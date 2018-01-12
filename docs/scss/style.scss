@@ -1,0 +1,191 @@
+@import "global";
+@import "mixins";
+body {
+  line-height: 1.5;
+}
+
+
+.grid-20,.grid-33,.grid-30.grid-50 {
+  @include responsive(mobile-screen) {
+    padding: 10px 0;
+  }
+}
+.cover-header {
+  background: $base-color url("../img/bg.svg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  padding: 60px 0;
+
+  h1 {
+    color: $second-color;
+    font-size: 88px;
+    line-height: 1.4;
+
+    @include responsive(mobile-screen) {
+      font-size: 40px;
+    }
+  }
+
+  h2.desc {
+    font-size: 26px;
+    color: $second-color;
+    font-weight: 300;
+    font-family: $font;
+  }
+
+  .menu {
+    padding: 30px 0 0 0;
+
+    li {
+      display: inline-block;
+      margin: 0 20px;
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 16px;
+
+        &:hover {
+         text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.msection {
+  text-align: center;
+
+  h2.title {
+    font-size: 67px;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+    color: $second-color;
+
+    @include responsive(mobile-screen) {
+      font-size: 45px;
+    }
+  }
+
+  .grid-container {
+    max-width: 780px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+/*------------------------------------------------*/
+/*-----------------[ABOUT SECTION]-----------------*/
+/*------------------------------------------------*/
+.about-section {
+  .text {
+    margin-top: 20px;
+    font-weight: 300;
+  }
+}
+
+/*------------------------------------------------*/
+/*-----------------[HOW TO USE SECTION]-----------------*/
+/*------------------------------------------------*/
+
+.htu-section {
+  background-color: #f0f0f0;
+
+  h2.title {
+    color: #444444;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.mf-btn.download-btn {
+  margin-top: 30px;
+  color: #444444;
+}
+
+.example-section {
+  h2.title {
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .mf-btn {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+.gradient-class {
+  input[type="checkbox"]:checked + .switcher {
+    background: #c06651;
+    background: -webkit-linear-gradient(to bottom, #9b70ad, #c06651);
+    background: linear-gradient(to bottom, #9B70AD, #c06651);
+
+    &:before {
+      background: #c0392b;
+      background: -webkit-linear-gradient(to top, #8e44ad, #c0392b);
+      background: linear-gradient(to top, #8e44ad, #c0392b);
+    }
+  }
+}
+
+.custom-class {
+  input[type="checkbox"]:checked + .switcher {
+    background: #c06651;
+
+    &:before {
+      background: #c0392b;
+    }
+  }
+}
+
+.toggle-box {
+  display: none;
+  background-color: #eee;
+  padding: 30px;
+  text-align: left;
+
+  li {
+    margin-left: 15px;
+    list-style: disc;
+  }
+  &.show {
+    display: block;
+  }
+}
+
+h3.donate-title {
+  padding: 0;
+  margin-top: 60px;
+  color: $second-color;
+}
+
+.donate-btn {
+  margin: 0 !important;
+}
+
+.donate-box code {
+  background-color: #fff;
+  padding: 20px;
+  overflow: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
+  box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "desc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milad Dehghan (Fekr Bekr Team)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0"
+  }
+}

@@ -1,0 +1,149 @@
+.cl-switch {
+  /*
+  Switcher Style
+   */
+  /*
+  When Checked
+   */
+  /*
+  Switch large style
+   */
+  /*
+  Switch xlarge style
+   */
+  /*
+  Switch Black color style
+   */
+  /*
+  Switch Red color style
+   */
+  /*
+  Switch green color style
+   */
+  /*
+  Switch green color style
+   */
+}
+.cl-switch input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+.cl-switch .switcher {
+  display: inline-block;
+  border-radius: 100px;
+  width: 35px;
+  height: 15px;
+  background-color: #ccc;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.cl-switch .switcher:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  margin-top: -2.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.cl-switch .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(63, 81, 181, 0.3);
+  transition: all, 0.1s;
+}
+.cl-switch .label {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.cl-switch input[type="checkbox"]:checked + .switcher {
+  background-color: #8591d5;
+}
+.cl-switch input[type="checkbox"]:checked + .switcher:before {
+  right: 100%;
+  margin-right: -20px;
+  background-color: #3f51b5;
+}
+.cl-switch.cl-switch-large .switcher {
+  width: 52px;
+  height: 22px;
+}
+.cl-switch.cl-switch-large .switcher:before {
+  width: 30px;
+  height: 30px;
+  margin-top: -4px;
+}
+.cl-switch.cl-switch-large .label {
+  font-size: 18px;
+}
+.cl-switch.cl-switch-large input[type="checkbox"]:checked + .switcher:before {
+  margin-right: -30px;
+}
+.cl-switch.cl-switch-xlarge .switcher {
+  width: 87px;
+  height: 37px;
+}
+.cl-switch.cl-switch-xlarge .switcher:before {
+  width: 50px;
+  height: 50px;
+  margin-top: -6px;
+}
+.cl-switch.cl-switch-xlarge .label {
+  font-size: 24px;
+}
+.cl-switch.cl-switch-xlarge input[type="checkbox"]:checked + .switcher:before {
+  margin-right: -50px;
+}
+.cl-switch.cl-switch-black input[type="checkbox"]:checked + .switcher {
+  background-color: #676767;
+}
+.cl-switch.cl-switch-black input[type="checkbox"]:checked + .switcher:before {
+  background-color: #343434;
+}
+.cl-switch.cl-switch-black .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(52, 52, 52, 0.3);
+}
+.cl-switch.cl-switch-red input[type="checkbox"]:checked + .switcher {
+  background-color: #ffcece;
+}
+.cl-switch.cl-switch-red input[type="checkbox"]:checked + .switcher:before {
+  background-color: #ff6868;
+}
+.cl-switch.cl-switch-red .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(255, 104, 104, 0.3);
+}
+.cl-switch.cl-switch-green input[type="checkbox"]:checked + .switcher {
+  background-color: #77e4c0;
+}
+.cl-switch.cl-switch-green input[type="checkbox"]:checked + .switcher:before {
+  background-color: #29cc97;
+}
+.cl-switch.cl-switch-green .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(41, 204, 151, 0.3);
+}
+.cl-switch.cl-switch-orange input[type="checkbox"]:checked + .switcher {
+  background-color: #ffc166;
+}
+.cl-switch.cl-switch-orange input[type="checkbox"]:checked + .switcher:before {
+  background-color: #ff9800;
+}
+.cl-switch.cl-switch-orange .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(255, 152, 0, 0.3);
+}

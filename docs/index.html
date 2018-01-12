@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Clean Switch - Material Inspired Pure CSS toggle switch</title>
+
+
+	<meta property="og:title" content="Clean Switch - Material Inspired Pure CSS toggle switch" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.yakaferci.com/open-graph/" />
+	<meta property="og:image" content="http://www.yakaferci.com/images/yakaferci_small.jpg" />
+
+	<link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet-no-ie7.css">
+	<link rel="stylesheet" href="css/clean-switch.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="icon-font/style.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:300,400" rel="stylesheet">-->
+
+</head>
+<body>
+<header class="cover-header">
+	<label class="cl-switch cl-switch-xlarge">
+		<input type="checkbox" >
+		<span class="switcher"></span>
+	</label>
+
+	<h1>Clean Switch</h1>
+	<h2 class="desc">Material Inspired Pure CSS toggle switch</h2>
+
+	<div class="aligncenter">
+		<a href="#" class="mf-btn mf-btn-shadow mf-btn-gray download-btn"><i class="icon-download"></i> Download</a>
+	</div>
+
+	<ul class="menu">
+		<li><a href="#" title="Examples">Examples</a></li>
+		<li><a href="#how-to-use" title="How to use">How to use</a></li>
+		<li><a href="#" title="Github page"><i class="icon-github-big-logo"></i> Github page</a></li>
+	</ul>
+
+</header>
+
+<section class="msection about-section">
+	<div class="grid-container">
+		<h2 class="title">About</h2>
+
+		<label class="cl-switch">
+			<input type="checkbox" checked>
+			<span class="switcher"></span>
+		</label>
+
+		<p class="text">
+			Clean switch is just a lightweight pure css toggle. witch is simillar to Material Design lite switch(MDL) But in pure css and better syntax and no dependency
+		</p>
+	</div>
+</section>
+
+<section class="msection htu-section" id="how-to-use">
+	<div class="grid-container">
+		<h2 class="title">How To Use</h2>
+		<p>First copy <b>clean-switch.css</b> in your project. then link it to your project HTML file</p>
+		<pre><code class="language-html">&lt;link rel="stylesheet" href="clean-switch.css"&gt;<br />
+</code></pre>
+		<p>You can also use SCSS file  <b>clean-switch.scss</b></p>
+		<br>
+		<br>
+		<p>Make HTML switch structure like this. and put it inside forms or anywhere you like and it will behave like checkboxes.</p>
+
+		<pre><code class="language-html">&lt;label class="cl-switch"&gt;<br />
+	&lt;input type="checkbox" &gt;<br />
+	&lt;span class="switcher"&gt;&lt;/span&gt;<br />
+	&lt;span class="label"&gt;this is label&lt;/span&gt;<br />
+&lt;/label&gt;</code></pre>
+
+		<br><br>
+		<p>For More options like color and sizes see examples blow</p>
+	</div>
+</section>
+
+<div class="msection example-section" id="examples">
+	<div class="grid-container">
+		<h2 class="title">Diffrent Sizes</h2>
+
+		<div class="grid-33">
+			<label class="cl-switch">
+				<input type="checkbox" >
+				<span class="switcher"></span>
+				<span class="label">Normal</span>
+			</label>
+		</div>
+
+		<div class="grid-33">
+			<label class="cl-switch cl-switch-large">
+				<input type="checkbox" >
+				<span class="switcher"></span>
+				<span class="label">Large</span>
+			</label>
+		</div>
+
+		<div class="grid-33">
+			<label class="cl-switch cl-switch-xlarge">
+				<input type="checkbox" >
+				<span class="switcher"></span>
+				<span class="label">Xlarge</span>
+			</label>
+		</div>
+		
+		<div class="clear"></div>
+
+		<a class="mf-btn mf-btn-gray mf-btn-large toggle-btn" href="#"><i class="icon-embed2"></i> Show Code</a>
+		<div class="toggle-box">
+			<p>To adjust size of switch just add classes to the list of classes in switch ellement</p>
+
+
+				<label class="cl-switch cl-switch-large">
+					<input type="checkbox" >
+					<span class="switcher"></span>
+					<span class="label">this is large switch</span>
+				</label>
+
+				<pre><code class="language-html">&lt;label class="cl-switch cl-switch-large"&gt;<br />
+	&lt;input type="checkbox" &gt;<br />
+	&lt;span class="switcher"&gt;&lt;/span&gt;<br />
+	&lt;span class="label"&gt;this is large switch&lt;/span&gt;<br />
+&lt;/label&gt;</code></pre>
+
+			<div class="clear"></div>
+			<br>
+			<p>size classes are:</p>
+			<ul>
+				<li><b>cl-switch-large</b></li>
+				<li><b>cl-switch-xlarge</b></li>
+			</ul>
+
+		</div>
+
+
+		<h2 class="title">Diffrent Colors</h2>
+
+		<div class="grid-20">
+			<label class="cl-switch">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Blue(default)</span>
+			</label>
+		</div>
+
+		<div class="grid-20">
+			<label class="cl-switch cl-switch-black">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Black</span>
+			</label>
+		</div>
+
+		<div class="grid-20">
+			<label class="cl-switch cl-switch-red">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Red</span>
+			</label>
+		</div>
+
+		<div class="grid-20">
+			<label class="cl-switch cl-switch-green">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Green</span>
+			</label>
+		</div>
+
+		<div class="grid-20">
+			<label class="cl-switch cl-switch-orange">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Orange</span>
+			</label>
+		</div>
+
+		<div class="clear"></div>
+
+		<a class="mf-btn mf-btn-gray mf-btn-large toggle-btn" href="#"><i class="icon-embed2"></i> Show Code</a>
+		<div class="toggle-box">
+			<p>To adjust color of the switch just add classes to the list of classes in switch ellement</p>
+
+			<label class="cl-switch cl-switch-red">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">this is red switch</span>
+			</label>
+
+			<pre><code class="language-html">&lt;label class="cl-switch cl-switch-red"&gt;<br />
+	&lt;input type="checkbox" &gt;<br />
+	&lt;span class="switcher"&gt;&lt;/span&gt;<br />
+	&lt;span class="label"&gt;this is red switch&lt;/span&gt;<br />
+&lt;/label&gt;</code></pre>
+			<br>
+			<p>color classes are:</p>
+			<ul>
+				<li><b>cl-switch-black</b></li>
+				<li><b>cl-switch-red</b></li>
+				<li><b>cl-switch-green</b></li>
+				<li><b>cl-switch-orange</b></li>
+			</ul>
+
+		</div>
+		<h2 class="title">Custom Colors</h2>
+
+
+		<div class="grid-30  push-20">
+			<label class="cl-switch custom-class">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Custom</span>
+			</label>
+		</div>
+
+		<div class="grid-30 push-20">
+			<label class="cl-switch gradient-class">
+				<input type="checkbox" checked>
+				<span class="switcher"></span>
+				<span class="label">Gradiant</span>
+			</label>
+		</div>
+
+		<div class="clear"></div>
+
+		<a class="mf-btn mf-btn-gray mf-btn-large toggle-btn" href="#"><i class="icon-embed2"></i> Show Code</a>
+		<div class="toggle-box">
+			<p>For Some projects you will need custom color so you can do it with small CSS</p>
+				<label class="cl-switch custom-class">
+					<input type="checkbox" checked>
+					<span class="switcher"></span>
+					<span class="label">Custom</span>
+				</label>
+			<br>
+			<br>
+			<p><b>1-</b> first you should add a class to class list of cl-switch in this example its <b>custom-class</b></p>
+			<pre><code class="language-html">&lt;label class="cl-switch custom-class"&gt;<br />
+	&lt;input type="checkbox" &gt;<br />
+	&lt;span class="switcher"&gt;&lt;/span&gt;<br />
+	&lt;span class="label"&gt;this is custom color switch&lt;/span&gt;<br />
+&lt;/label&gt;</code></pre>
+			<br>
+			<p><b>2-</b> then you should adjust its color in your css <b>that is loaded after cl-switch css</b></p>
+			<pre><code class="language-css">.custom-class input[type="checkbox"]:checked + .switcher {
+  background: #c06651; /*this is body of switch that should be lighter color*/
+}
+.custom-class input[type="checkbox"]:checked + .switcher:before {
+  background: #c0392b; /*this is btn of switch that should be darker color*/
+}</code></pre>
+
+
+		</div>
+
+
+
+		<br><br>
+		<h3 class="donate-title">Buy me a Beer :D</h3>
+		<a class="mf-btn mf-btn-small mf-btn-gray donate-btn toggle-btn"><i class="icon-brand"></i> Donate with Bitcoin or Ethereum</a>
+		<div class="toggle-box donate-box">
+			<b>thank you for your effort <3</b>
+			<br>
+			<i class="icon-brand"></i> bitcoin address <br>
+			<code>1Dgn64K6X6F9FfZ1tcAkfYKZTtPnrWp57h</code>
+
+			<br><br>
+
+			<i class="icon-brand2"></i> Ethereum address <br>
+			<code>0x611d47A21e24971AE240CF4bA076a8dF78330FbF</code>
+		</div>
+	</div>
+
+</div>
+<script src="js/prism.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/yea.js"></script>
+</body>
+</html>
