@@ -25,7 +25,7 @@ gulp.task('cleansw-compass', function() {
       .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('sass', function () {
+gulp.task('style-sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
@@ -37,9 +37,9 @@ gulp.task('cleansw-sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', [ 'style-compass' ]);
+gulp.task('default', [ 'style-sass','cleansw-sass']);
 
-gulp.task('watch', [ 'style-compass','cleansw-compass'] , function(){
+gulp.task('watch', [ 'style-sass','cleansw-sass'] , function(){
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('scss/clean-switch.scss', ['cleansw-sass']);
 });
