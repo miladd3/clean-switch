@@ -73,6 +73,13 @@
       right: 100%;
       margin-right: -20px;
       background-color: #3f51b5; }
+  .cl-switch [disabled]:not([disabled="false"]) + .switcher {
+    background: #ccc !important; }
+    .cl-switch [disabled]:not([disabled="false"]) + .switcher:active:before {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important; }
+    .cl-switch [disabled]:not([disabled="false"]) + .switcher:before {
+      background-color: #e2e2e2 !important;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important; }
   .cl-switch.cl-switch-large .switcher {
     width: 52px;
     height: 22px; }

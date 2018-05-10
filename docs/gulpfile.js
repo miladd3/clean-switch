@@ -40,6 +40,6 @@ gulp.task('cleansw-sass', function () {
 gulp.task('default', [ 'style-sass','cleansw-sass']);
 
 gulp.task('watch', [ 'style-sass','cleansw-sass'] , function(){
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('scss/*.scss', ['style-sass']);
     gulp.watch('scss/clean-switch.scss', ['cleansw-sass']);
 });

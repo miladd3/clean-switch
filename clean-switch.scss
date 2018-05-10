@@ -77,6 +77,21 @@ $orange-color: #ff9800;
     }
   }
 
+  & [disabled]:not([disabled="false"]) + .switcher {
+    background: #ccc !important;
+
+    &:active:before {
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) !important;
+    }
+
+    &:before {
+      background-color: #e2e2e2 !important;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) !important;
+    }
+  }
+
+
+
 
 
   /*
