@@ -46,11 +46,6 @@ to make a switch disable simply add disabled attribute to checkbox
     	<span class="label">Disabled</span>
     </label>
 
-size classes are:
-
-* cl-switch-large
-* cl-switch-xlarge
-
 
 # Diffrent Colors
 To adjust color of the switch just add classes to the list of classes in switch ellement
