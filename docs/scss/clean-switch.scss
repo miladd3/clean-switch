@@ -3,6 +3,7 @@ $black-color: #343434;
 $red-color: #ff6868;
 $green-color: #29cc97;
 $orange-color: #ff9800;
+$ios-green: #4bd964;
 
 .cl-switch {
   input[type="checkbox"] {
@@ -81,17 +82,14 @@ $orange-color: #ff9800;
     background: #ccc !important;
 
     &:active:before {
-      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) !important;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
     }
 
     &:before {
       background-color: #e2e2e2 !important;
-      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) !important;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
     }
   }
-
-
-
 
 
   /*
@@ -103,9 +101,9 @@ $orange-color: #ff9800;
       height: 22px;
 
       &:before {
-        width:30px;
-        height:30px;
-        margin-top:-4px;
+        width: 30px;
+        height: 30px;
+        margin-top: -4px;
       }
     }
 
@@ -130,9 +128,9 @@ $orange-color: #ff9800;
       height: 37px;
 
       &:before {
-        width:50px;
-        height:50px;
-        margin-top:-6px;
+        width: 50px;
+        height: 50px;
+        margin-top: -6px;
       }
     }
 
@@ -166,6 +164,7 @@ $orange-color: #ff9800;
       0 0 0 10px rgba($black-color, 0.3);
     }
   }
+
   /*
   Switch Red color style
    */
@@ -220,6 +219,223 @@ $orange-color: #ff9800;
     .switcher:active:before {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
       0 0 0 10px rgba($orange-color, 0.3);
+    }
+  }
+}
+
+/* ---------------------------------------------
+------------------[IOS style]----------------------------
+ --------------------------------------------- */
+
+.cl-switch.ios {
+  /*
+Switcher Style
+ */
+  .switcher {
+    width: 45px;
+    height: 24px;
+    background-color: #fff;
+    border: 1px solid #d3d3d5;
+    box-shadow: 0 0 0 0 $ios-green inset;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+    &:before {
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      margin-top: 0;
+      top: -1px;
+      right: -1px;
+      margin-right: 0;
+      border: 1px solid #d3d3d5;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+    }
+
+  }
+
+
+
+  /*
+  When Checked
+   */
+  input[type="checkbox"]:checked + .switcher {
+    background-color: #fff;
+    box-shadow: 0 0 0 20px $ios-green inset;
+
+    &:before {
+      right: 100%;
+      margin-right: -22px;
+      background-color: #fff;
+    }
+  }
+
+  & [disabled]:not([disabled="false"]) + .switcher {
+    background: #ccc !important;
+
+    &:active:before {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &:before {
+      background-color: #e2e2e2 !important;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+
+
+
+  /*
+  Switch large style
+   */
+  &.cl-switch-large {
+    .switcher {
+      width: 62px;
+      height: 34px;
+
+      &:before {
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .label {
+      font-size: 18px;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      &:before {
+        margin-right: -30px;
+      }
+    }
+  }
+
+
+  /*
+  Switch xlarge style
+   */
+  &.cl-switch-xlarge {
+    .switcher {
+      width: 80px;
+      height: 40px;
+
+      &:before {
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+      }
+    }
+
+    .label {
+      font-size: 24px;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      &:before {
+        margin-right: -39px;
+      }
+    }
+  }
+
+
+  /*
+  Switch Black color style
+   */
+
+  &.cl-switch-black {
+    .switcher {
+      box-shadow: 0 0 0 0 $black-color inset;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      box-shadow: 0 0 0 20px $black-color inset;
+      background: #ffffff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: none;
+    }
+  }
+
+  /*
+  Switch Red color style
+   */
+
+
+  &.cl-switch-red {
+    .switcher {
+      box-shadow: 0 0 0 0 $red-color inset;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      box-shadow: 0 0 0 20px $red-color inset;
+      background: #ffffff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: none;
+    }
+  }
+
+  /*
+  Switch green color style
+   */
+
+  &.cl-switch-green {
+    .switcher {
+      box-shadow: 0 0 0 0 $green-color inset;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      box-shadow: 0 0 0 20px $green-color inset;
+      background: #ffffff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: none;
+    }
+  }
+
+  /*
+  Switch green color style
+   */
+
+  &.cl-switch-orange {
+    .switcher {
+      box-shadow: 0 0 0 0 $orange-color inset;
+    }
+
+    input[type="checkbox"]:checked + .switcher {
+      box-shadow: 0 0 0 20px $orange-color inset;
+      background: #ffffff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .switcher:active:before {
+      box-shadow: none;
     }
   }
 }

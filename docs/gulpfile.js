@@ -3,27 +3,8 @@
  */
 var gulp = require('gulp');
 var compass = require('gulp-compass');
-const sass = require('gulp-sass');
+var sass = require('gulp-sass');
 
-
-gulp.task('style-compass', function() {
-    gulp.src('./scss/style.scss')
-      .pipe(compass({
-          css: 'css',
-          sass: 'scss'
-      }))
-      .pipe(gulp.dest('css'));
-});
-
-gulp.task('cleansw-compass', function() {
-    gulp.src('./scss/clean-switch.scss')
-      .pipe(compass({
-          css: 'css',
-          sass: 'scss'
-      }))
-      .pipe(gulp.dest('css'))
-      .pipe(gulp.dest('./dist'))
-});
 
 gulp.task('style-sass', function () {
     return gulp.src('./scss/style.scss')
@@ -33,7 +14,7 @@ gulp.task('style-sass', function () {
 
 gulp.task('cleansw-sass', function () {
     return gulp.src('./scss/clean-switch.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
 

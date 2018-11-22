@@ -14,8 +14,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -113,9 +113,13 @@ $titles-font: 'Lobster', sans-serif;
 .margin-top {
   margin-top: 20px;
 }
+.margin-left {
+  margin-left: 20px;
+}
 /*======== Mixings ========*/
 
-@import "mixins";
+@import "parts/mixins";
+@import "parts/spacing";
 
 /*======== Default Codes ========*/
 
@@ -187,7 +191,7 @@ i {
   box-sizing: padding-box;
   line-height: 40px;
   font-weight: 300;
-  
+
     &:before {
       content: "\f00c";
       display: block;
@@ -228,7 +232,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   @include transition();
-  
+
   &:focus {
     border: 1px solid lighten($base-color, 10%);
     display: inline-block;

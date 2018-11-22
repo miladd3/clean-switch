@@ -85,6 +85,20 @@ For Some projects you will need custom color so you can do it with small CSS
       background: #c0392b; /*this is btn of switch that should be darker color*/
     }
 
+# iOS Style
+
+If you are an iOS fan, you can have iOS style too
+
+just add `ios` class in label class list
+
+all sizing and colors works fine 
+
+    <label class="cl-switch ios">
+    	<input type="checkbox">
+    	<span class="switcher"></span>
+    	<span class="label">title</span>
+    </label>
+
 # licence and cast
 MIT Licence 
 
