@@ -39,7 +39,7 @@ $ios-green: #4bd964;
       margin-top: -2.5px;
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -72,8 +72,8 @@ $ios-green: #4bd964;
     background-color: lighten($btn-main-color, 20);
 
     &:before {
-      right: 100%;
-      margin-right: -20px;
+      left: 100%;
+      margin-left: -20px;
       background-color: $btn-main-color;
     }
   }
@@ -113,7 +113,7 @@ $ios-green: #4bd964;
 
     input[type="checkbox"]:checked + .switcher {
       &:before {
-        margin-right: -30px;
+        margin-left: -30px;
       }
     }
   }
@@ -140,7 +140,7 @@ $ios-green: #4bd964;
 
     input[type="checkbox"]:checked + .switcher {
       &:before {
-        margin-right: -50px;
+        margin-left: -50px;
       }
     }
   }

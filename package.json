@@ -1,0 +1,36 @@
+{
+  "name": "clean-switch",
+  "version": "1.0.0",
+  "description": "Material Inspired lightweight Pure CSS toggle switch ",
+  "main": "clean-switch.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladd3/clean-switch.git"
+  },
+  "keywords": [
+    "CSS",
+    "Switch",
+    "material",
+    "switch",
+    "SCSS",
+    "toggle"
+  ],
+  "author": "Milad Dehghan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miladd3/clean-switch/issues"
+  },
+  "homepage": "https://github.com/miladd3/clean-switch#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {}
+}
